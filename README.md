@@ -3,24 +3,24 @@
 This repository contains a small, production-style example of how enum-like
 behaviour **can be implemented in environments running PHP versions prior to 8.1**.
 
-When native enums are not available, enum behaviour can be achieved using
-immutable value objects with private constructors, named constructors, and
-explicit conversion methods. This approach allows type safety while still
-supporting legacy string and integer representations.
-
 ---
+## Purpose
 
-## What this repository demonstrates
+A simple enum-like value object that works in PHP versions prior to 8.1
 
-- An enum-like value object implemented in **PHP 7.4**
-- Controlled instantiation via named constructors
-- Explicit conversion from and to string and integer values
-- Predicate methods for readable domain checks
-- Prevention of invalid states by design
+Using named constructors to control how instances are created
 
+Converting cleanly between strings, integers, and a domain value
+
+Small helper methods for readable checks in calling code
+
+Keeping invalid states out of the system by design
+
+This isn’t a polyfill or a drop-in replacement for native enums.
+It’s a small reference example of an approach you can use in codebases that aren’t yet on PHP 8.1.
 This repository is **not** a polyfill or a replacement for native enums.
 It is a reference implementation of a pattern suitable for codebases that
-cannot yet adopt PHP 8.1.
+cannot yet use PHP 8.1.
 
 ---
 
