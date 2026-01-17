@@ -3,6 +3,9 @@
 This repository contains a small, production-style example of how enum-like
 behaviour **can be implemented in environments running PHP versions prior to 8.1**.
 
+This example uses simple `free` / `pro` values for clarity.  
+In a real codebase you would adapt the allowed values, constructors, and helpers to match your own domain concepts.
+
 ---
 ## Purpose
 
@@ -34,10 +37,3 @@ if ($planType->isPro()) {
 }
 
 $code = $planType->toCode(); // 2
-
-
-**Note**  
-This example uses simple `free` / `pro` values for clarity.  
-In a real codebase you would adapt the allowed values, constructors, and helpers to match your own domain concepts.
-
-
